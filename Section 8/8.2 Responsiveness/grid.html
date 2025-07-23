@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Grid</title>
+  <style>
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr ;
+      grid-template-rows: 100px 200px 200px;
+      gap: 10px;
+    }
+
+     .card {
+      background-color:yellow;
+      border: 2px solid black;
+      text-align: center;
+      font-size: 3rem;
+    }
+
+    .first {
+      grid-column: span 2;
+      text-align: left;
+      font-size: 1rem;
+    }
+
+  </style>
+</head>
+
+<body>
+  <h1>CSS Grid</h1>
+  <div class="grid-container">
+    <div class="first card">Name List</div>
+    <div class="card">My name is Desmond</div>
+    <div class="card">My name is Vanessa</div>
+    <div class="card">My name is Adeline</div>
+    <div class="card">My name is Ngoh</div>
+  </div>
+
+</body>
+
+</html>

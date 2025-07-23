@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flexbox Pricing Table</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <h1>Vanessa Telco Promotion</h1>
+
+    <style>
+      body {
+        font-family: "Sono", sans-serif;
+        background: #f2f2f2;
+        margin:0;
+        padding:40px 20px;
+        display:flex;
+        flex-direction:column;
+        align-items: center;
+      }
+
+       .plan-button {
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        padding: 12px;
+        border-radius: 10px;
+        cursor: pointer;
+        font-weight: 600;
+        width: 100%;
+        transition: background 0.3s;
+    }
+
+      .pricing-container{
+        display:flex;
+        gap:30px;
+        justify-content:center;
+        flex-wrap:wrap;
+        max-width: 1200px;
+      }
+
+      .pricing-plan{
+        border: 2px solid black;
+        padding:30px 25px;
+        width:300px;
+        height:fit-content;
+        box-shadow:0 12px 24px rgba(0,0,0,0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+        background-color: beige;
+        border-radius: 5cqb;
+      }
+
+      .plan-title {
+        font-weight: 800;
+        font-size: 28px;
+        border-bottom: 15px;
+        color:#333;
+        text-align: center;
+      }
+
+      .plan-price{
+        font-size: 20px;
+        font-weight: 600;
+        border-bottom: 20px;
+        text-align: center;
+        color:#666;
+      }
+
+      .plan-features {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 30px 0;
+    }
+
+      .plan-features li {
+        text-align: center;
+        padding: 8px 0;
+        font-size: 16px;
+        border-bottom: 1px solid #eee;
+      }
+
+      /* Hint: What can you do with a media query and flexbox? */
+      @media (max-width: 1250px) {
+        .pricing-container{
+          flex-direction:column;
+          align-items: center;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="pricing-container">
+      <div class="pricing-plan">
+        <div class="plan-title">Basic</div>
+        <div class="plan-price">$9.99/month</div>
+        <ul class="plan-features">
+          <li>✅ 10GB Storage</li>
+          <li>✅ 1 User</li>
+          <li>🚫 Support</li>
+        </ul>
+        <button class="plan-button">Sign Up</button>
+      </div>
+
+      <div class="pricing-plan">
+        <div class="plan-title">Standard</div>
+        <div class="plan-price">$19.99/month</div>
+        <ul class="plan-features">
+          <li>✅ 50GB Storage</li>
+          <li>✅ 5 Users</li>
+          <li>✅ Phone &amp; Email Support</li>
+        </ul>
+        <button class="plan-button">Sign Up</button>
+      </div>
+
+      <div class="pricing-plan">
+        <div class="plan-title">Premium</div>
+        <div class="plan-price">$49.99/month</div>
+        <ul class="plan-features">
+          <li>✅ 100GB Storage</li>
+          <li>✅ 10 Users</li>
+          <li>✅ 24/7 Support</li>
+        </ul>
+        <button class="plan-button">Sign Up</button>
+      </div>
+    </div>
+  </body>
+
+</html>
