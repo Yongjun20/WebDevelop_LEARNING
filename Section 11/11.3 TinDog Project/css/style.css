@@ -1,0 +1,95 @@
+.gradient-background {
+  background: linear-gradient(300deg, #00bfff, #ff4c68, #ef8172);
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.icon-square {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.75rem;
+}
+
+.profile-img {
+  height: 100px;
+  border-radius: 50%;
+}
+
+#header_icons{
+  padding-left: 20px;
+}
+
+/* Wrapper */
+.nav-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+/* Nav Menu */
+.nav-menu {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  gap: 24px;
+  position: relative;
+}
+
+/* Nav Link Styles */
+.nav-link {
+  position: relative;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 12px;
+  transition: color 0.3s ease;
+  z-index: 1;
+}
+
+/* Hover Indicator Using ::before */
+.nav-link::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: pink;
+  border-radius: 12px;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.3s ease;
+  z-index: -1;
+}
+
+/* On Hover: show background */
+.nav-link:hover::before {
+  transform: scaleX(1);
+}
+
+/* Always show for active (Home) */
+.nav-link.active::before {
+  transform: scaleX(1);
+  background-color:bisque;
+}
+
+.nav-link:hover {
+  color:black;
+}
+
+.btn-lg{
+  outline:2px solid black;
+}
+
+
+
